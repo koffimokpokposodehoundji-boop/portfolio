@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio | Développeur</title>
+    <title>Portfolio | Koffi Mokpokpo SODEHOUNDJI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -56,12 +56,12 @@
 
             {{-- Colonne Gauche : Textes et Boutons --}}
             <div class="text-center lg:text-left space-y-12">
-                <h1 class="text-4xl md:text-8xl xl:text-9xl font-extrabold text-dark leading-none tracking-tighter">
-                    Web <br>
-                    <span class="text-primary">Développeur</span>
+                <h1 class="text-1xl md:text-5xl xl:text-8xl font-extrabold text-dark leading-none tracking-tighter">
+                    Full-stack<br>
+                    <span class="text-primary">Developer</span>
                 </h1>
                 <p class="text-2xl md:text-3xl text-slate-700 max-w-4xl mx-auto lg:mx-0 leading-relaxed">
-                    Étudiant en Informatique, je conçois des solutions web performantes et des interfaces modernes.
+                    Étudiant en Informatique, je conçois des solutions web et Mobile performantes et des interfaces modernes.
                 </p>
                 <div class="flex items-center justify-center lg:justify-start gap-6 pt-6 text-2xl text-slate-400">
                     <a href="https://github.com/koffimokpokposodehoundji-boop" class="hover:text-dark transition"><i class="fab fa-github"></i></a>
@@ -83,7 +83,7 @@
                     {{-- Arrière-plan décoratif pour l'image --}}
                     <div class="absolute inset-0 bg-gradient-to-tr from-primary to-blue-300 rounded-[3rem] rotate-6 opacity-20 blur-sm"></div>
                     {{-- Balise Image --}}
-                    <img src="chemin_vers_ton_image.jpg" alt="KMS" class="absolute inset-0 w-full h-full object-cover rounded-[3rem] shadow-2xl border-4 border-white transition-transform duration-500 hover:scale-[1.02]">
+                    <img src="{{ asset('image/13.jpg') }}" alt="KMS" class="absolute inset-0 w-full h-full object-cover rounded-[3rem] shadow-2xl border-4 border-white transition-transform duration-500 hover:scale-[1.02]">
                 </div>
             </div>
 
@@ -103,7 +103,7 @@
                         <i class="fab fa-code"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-slate-900 mb-4">Développement</h3>
-                    <p class="text-slate-600">Conception d'applications robustes avec Laravel et Java.</p>
+                    <p class="text-slate-600">Conception de site web et d'applications robustes avec Laravel et Flutter.</p>
                 </div>
                 <div class="bg-slate-50 p-10 rounded-[2.5rem] border border-slate-100 transition hover:shadow-xl group text-center">
                     <div class="w-16 h-16 mx-auto rounded-2xl bg-indigo-600 flex items-center justify-center text-white text-3xl mb-8 transition group-hover:scale-110">
@@ -292,7 +292,7 @@
 
     {{-- Pied de page --}}
     <footer class="py-12 border-t border-slate-100 text-center text-slate-400 text-sm">
-        &copy; 2026 - Portfolio Développeur - Créé avec Laravel
+        &copy; 2026 - Portfolio | Koffi Mokpokpo SODEHOUNDJI
     </footer>
 
 </body>
