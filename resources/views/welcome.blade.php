@@ -145,6 +145,9 @@
         elseif(Str::contains($name, 'mysql')) { $color = 'blue'; $icon = 'fas fa-database'; }
         elseif(Str::contains($name, 'tailwind')) { $color = 'cyan'; $icon = 'fab fa-css3-alt'; }
         elseif(Str::contains($name, 'git')) { $color = 'slate'; $icon = 'fab fa-git-alt'; }
+        elseif(Str::contains($name, 'Flutter')) { $color = 'yellow'; $icon = 'fab fa-git-alt'; }
+        elseif(Str::contains($name, 'Springboot')) { $color = 'green'; $icon = 'fab fa-git-alt'; }
+
 
         // Option Indigo (proche du bleu/violet de Symfony)
     elseif(Str::contains($name, 'symfony')) { $color = 'indigo'; $icon = 'fab fa-symfony'; }
@@ -155,6 +158,8 @@
     // AJOUT POUR LINUX
    // Option Orange (Style Ubuntu 🍊)
     elseif(Str::contains($name, 'linux')) { $color = 'cyan'; $icon = 'fab fa-linux'; }
+    elseif(Str::contains($name, 'Flutter')) { $color = 'yellow'; $icon = 'fab fa-Flutter'; }
+     elseif(Str::contains($name, 'Springboot')) { $color = 'green'; $icon = 'fab fa-Springboot'; }
     @endphp
 
     <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-xl shadow-slate-200/50 transition-all duration-500 hover:-translate-y-3 group flex flex-col items-center text-center
@@ -249,41 +254,41 @@
 </section>
 
     {{-- Section Contact --}}
-    <section id="contact" class="py-24 px-6 bg-white">
+    <section id="contact" class="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-white">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-extrabold text-slate-900 mb-4">Contact</h2>
-                <p class="text-slate-600 text-lg">Discutons de votre prochain projet</p>
+            <div class="text-center mb-10 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-3 sm:mb-4">Contact</h2>
+                <p class="text-slate-600 text-base sm:text-lg">Discutons de votre prochain projet</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-12 bg-white rounded-[2.5rem] shadow-2xl border border-slate-100 overflow-hidden">
-                <div class="bg-slate-950 p-12 text-white flex flex-col justify-center space-y-10">
-                    <div class="flex items-start gap-5 group">
-                        <div class="w-12 h-12 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition">
-                            <i class="fas fa-envelope text-xl"></i>
+            <div class="grid md:grid-cols-2 gap-0 bg-white rounded-2xl sm:rounded-[2.5rem] shadow-2xl border border-slate-100 overflow-hidden">
+                <div class="bg-slate-950 p-8 sm:p-10 md:p-12 text-white flex flex-col justify-center space-y-6 sm:space-y-8 md:space-y-10">
+                    <div class="flex items-start gap-4 sm:gap-5 group">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition flex-shrink-0">
+                            <i class="fas fa-envelope text-base sm:text-xl"></i>
                         </div>
-                        <div>
-                            <p class="text-slate-400 text-sm font-bold uppercase">Email</p>
-                            <p class="text-lg">koffimokpokposodehoundji@gmail.com</p>
+                        <div class="min-w-0">
+                            <p class="text-slate-400 text-xs sm:text-sm font-bold uppercase">Email</p>
+                            <p class="text-base sm:text-lg break-all">koffimokpokposodehoundji@gmail.com</p>
                         </div>
                     </div>
-                    <div class="flex items-start gap-5 group">
-                        <div class="w-12 h-12 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition">
-                            <i class="fab fa-whatsapp text-xl"></i>
+                    <div class="flex items-start gap-4 sm:gap-5 group">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition flex-shrink-0">
+                            <i class="fab fa-whatsapp text-base sm:text-xl"></i>
                         </div>
                         <div>
-                            <p class="text-slate-400 text-sm font-bold uppercase">WhatsApp</p>
-                            <p class="text-lg">+228 70782133</p>
+                            <p class="text-slate-400 text-xs sm:text-sm font-bold uppercase">WhatsApp</p>
+                            <p class="text-base sm:text-lg">+228 70782133</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="p-12">
-                    <form action="{{ route('contact.send') }}" method="POST" class="space-y-6">
+                <div class="p-8 sm:p-10 md:p-12">
+                    <form action="{{ route('contact.send') }}" method="POST" class="space-y-4 sm:space-y-6">
                         @csrf
-                        <input type="text" name="nom" required placeholder="Votre nom" class="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-200 outline-none focus:border-blue-500 transition">
-                        <input type="email" name="email" required placeholder="votre@email.com" class="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-200 outline-none focus:border-blue-500 transition">
-                        <textarea name="message" rows="4" required placeholder="Votre message..." class="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-200 outline-none focus:border-blue-500 transition"></textarea>
-                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-5 rounded-2xl hover:bg-blue-700 transition shadow-xl shadow-blue-500/25">Envoyer</button>
+                        <input type="text" name="nom" required placeholder="Votre nom" class="w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 outline-none focus:border-blue-500 transition text-sm sm:text-base">
+                        <input type="email" name="email" required placeholder="votre@email.com" class="w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 outline-none focus:border-blue-500 transition text-sm sm:text-base">
+                        <textarea name="message" rows="4" required placeholder="Votre message..." class="w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 outline-none focus:border-blue-500 transition text-sm sm:text-base"></textarea>
+                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 sm:py-5 rounded-xl sm:rounded-2xl hover:bg-blue-700 transition shadow-xl shadow-blue-500/25 text-sm sm:text-base">Envoyer</button>
                     </form>
                 </div>
             </div>
