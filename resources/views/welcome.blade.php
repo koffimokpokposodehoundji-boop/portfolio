@@ -236,7 +236,7 @@
                         <div class="flex items-center justify-between pt-5 border-t border-slate-50">
                             @if($projet->lien_github)
                                 <a href="{{ $projet->lien_github }}" target="_blank" class="inline-flex items-center gap-2 text-slate-700 hover:text-primary font-bold text-sm transition">
-                                    <i class="fab fa-github text-lg"></i> Code source
+                                    <i class="fas fa-globes text-lg"></i> lien du site
                                 </a>
                             @endif
                             <span class="text-[10px] font-bold uppercase tracking-widest text-slate-300">Détails <i class="fas fa-arrow-right ml-1"></i></span>
