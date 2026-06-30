@@ -124,6 +124,7 @@
     </section>
 
     {{-- Section Compétences --}}
+    {{-- Section Compétences --}}
     <section id="competences" class="py-24 px-6 bg-slate-50">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
@@ -134,32 +135,21 @@
                 @foreach($competences as $comp)
     @php
         $color = 'blue';
-        $icon = 'fa-code'; // Icône par défaut
+        $icon = 'fas fa-code'; // Icône par défaut
         $name = strtolower($comp->nom);
 
         if(Str::contains($name, 'laravel')) { $color = 'red'; $icon = 'fab fa-laravel'; }
-        // AJOUT POUR HTML
-    elseif(Str::contains($name, 'html')) { $color = 'blue'; $icon = 'fab fa-html5'; }
+        elseif(Str::contains($name, 'html')) { $color = 'blue'; $icon = 'fab fa-html5'; }
         elseif(Str::contains($name, 'php')) { $color = 'indigo'; $icon = 'fab fa-php'; }
         elseif(Str::contains($name, 'java')) { $color = 'orange'; $icon = 'fab fa-java'; }
         elseif(Str::contains($name, 'mysql')) { $color = 'blue'; $icon = 'fas fa-database'; }
         elseif(Str::contains($name, 'tailwind')) { $color = 'cyan'; $icon = 'fab fa-css3-alt'; }
         elseif(Str::contains($name, 'git')) { $color = 'slate'; $icon = 'fab fa-git-alt'; }
-        elseif(Str::contains($name, 'Flutter')) { $color = 'yellow'; $icon = 'fab fa-git-alt'; }
-        elseif(Str::contains($name, 'Springboot')) { $color = 'green'; $icon = 'fab fa-git-alt'; }
-
-
-        // Option Indigo (proche du bleu/violet de Symfony)
-    elseif(Str::contains($name, 'symfony')) { $color = 'indigo'; $icon = 'fab fa-symfony'; }
-
-    // 3. AJOUT POUR LE LANGAGE C
-    elseif(Str::contains($name, 'c-language') || $name === 'c') { $color = 'red'; $icon = 'fas fa-terminal'; }
-
-    // AJOUT POUR LINUX
-   // Option Orange (Style Ubuntu 🍊)
-    elseif(Str::contains($name, 'linux')) { $color = 'cyan'; $icon = 'fab fa-linux'; }
-    elseif(Str::contains($name, 'Flutter')) { $color = 'yellow'; $icon = 'fab fa-Flutter'; }
-     elseif(Str::contains($name, 'Springboot')) { $color = 'green'; $icon = 'fab fa-Springboot'; }
+        elseif(Str::contains($name, 'flutter')) { $color = 'yellow'; $icon = 'fas fa-mobile-alt'; }
+        elseif(Str::contains($name, 'springboot')) { $color = 'green'; $icon = 'fas fa-leaf'; }
+        elseif(Str::contains($name, 'symfony')) { $color = 'indigo'; $icon = 'fab fa-symfony'; }
+        elseif(Str::contains($name, 'c-language') || $name === 'c') { $color = 'red'; $icon = 'fas fa-terminal'; }
+        elseif(Str::contains($name, 'linux')) { $color = 'cyan'; $icon = 'fab fa-linux'; }
     @endphp
 
     <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-xl shadow-slate-200/50 transition-all duration-500 hover:-translate-y-3 group flex flex-col items-center text-center
@@ -168,7 +158,7 @@
         @elseif($color == 'orange') hover:shadow-[0_20px_50px_rgba(249,115,22,0.3)]
         @elseif($color == 'blue') hover:shadow-[0_20px_50px_rgba(59,130,246,0.3)]
         @elseif($color == 'cyan') hover:shadow-[0_20px_50px_rgba(6,182,212,0.3)]
-        @else hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] @endif">
+        @else hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] </div>@endif">
 
         {{-- 1. L'ICÔNE EN HAUT --}}
         <div class="w-16 h-16 rounded-2xl bg-{{ $color }}-500 flex items-center justify-center text-white text-3xl mb-6 transition-transform duration-500 group-hover:scale-110 shadow-lg shadow-{{ $color }}-500/20">
